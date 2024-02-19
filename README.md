@@ -1,3 +1,5 @@
+_Disclamar: Project was abandoned rendering the project possibly un-runnable_
+
 ## Introduction
 
 This project is a Web API for the backend of Vidly, an imaginary movie rental service.<br>
