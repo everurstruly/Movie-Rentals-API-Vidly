@@ -1,0 +1,1330 @@
+{
+	"info": {
+		"_postman_id": "1415bf35-f525-495f-9069-02c9bae0997a",
+		"name": "vidly-movies-rental-api-js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "organization",
+			"item": [
+				{
+					"name": "admins",
+					"item": [
+						{
+							"name": "session",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"tyrone60@hotmail.com\",\r\n    \"password\": \"adminpassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/auth/session/admins",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"auth",
+										"session",
+										"admins"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "me",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"assignedRolesIds\": [\"63ae83da05d4bf952fb423b9\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/admins/me",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"admins",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-all-admins",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/admins",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"admins"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-an-admin",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/admins/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"admins",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63aef8ba93c15ab987c49832"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-new-admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"bob\",\r\n    \"lastName\": \"bob\",\r\n    \"dateOfBirth\": \"1985-11-18T01:24:58.892Z\",\r\n    \"email\": \"bob@gmail.com\",\r\n    \"password\": \"adminpassword\",\r\n    \"assignedRolesIds\": [\"63ae83da05d4bf952fb423b9\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/admins",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"admins"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-an-admin",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/admins/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"admins",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63ae7d0843ae6d78f6eeb2c2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-an-admin",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/admins/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"admins",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63aef8ba93c15ab987c49832"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "session",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"lucille7@hotmail.com\",\r\n    \"password\": \"userpassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/auth/session/users",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"auth",
+										"session",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "me",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-me",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVzZXJJZCI6IjYzOTllNmNmNzYzOWRlYmI2MDg0YzVmZiIsImFnZSI6NjUsImlzQmFubmVkIjpmYWxzZSwibWVtYmVyc2hpcHMiOlsiNjNhM2FmYzJkMmU5YzQ3Njk2ODUzNTE0Il19LCJpYXQiOjE2NzIwNzU2ODAsImV4cCI6MTY3MjA3NTcwNSwiaXNzIjoiYXlkaW5uZGVsdGFAZ21haWwuY29tIn0.lhsHBCoD7i8T58wBTMfnXzMoaAu33ENJXw9FhQJPss0",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{baseApiUrl}}/users/me",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"users",
+										"me"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-all-users",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/users",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-new-user",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"id\",\r\n    \"displayName\": \"Admin\",\r\n    \"firstName\": \"dee\",\r\n    \"lastName\": \"mei\",\r\n    \"password\": \"mypassword\",\r\n    \"age\": 82,\r\n    \"email\": \"deemei@gmail.com\",\r\n    \"memberships\": [\"6399e6d07639debb6084c602\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/users",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-a-user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/users/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63ae7d0e43ae6d78f6eeb312"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-a-user",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/users/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63aef8c093c15ab987c49884"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-a-user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/users/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "216adcbfd7774b9bdcb19f5c"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "roles",
+					"item": [
+						{
+							"name": "get-all-roles",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/roles",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-new-role",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/roles",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-a-role",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/roles/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"roles",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63aef8ba93c15ab987c49828"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-a-role",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/roles/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"roles",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63a4853d6767abeb1f658848"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-a-role",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/roles/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"roles",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63a771053b5a593306916259"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "membership",
+					"item": [
+						{
+							"name": "get-all-memberships",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/memberships",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"memberships"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-new-membership",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Demi God\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/memberships",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"memberships"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-a-membership",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/memberships/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"memberships",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63ae2b8837bb608675aefba6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-a-membership",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"GodUltra\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/memberships/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"memberships",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63ae2b8837bb608675aefba6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-a-membership",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/memberships/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"memberships",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63ae2b8837bb608675aefba6"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "inventory",
+			"item": [
+				{
+					"name": "movies",
+					"item": [
+						{
+							"name": "get-all-movies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/movies",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-new-movie",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Aydinn\",\r\n    \"genresIds\": [\r\n        \"63ab6f8e93375bb0e3a48db8\",\r\n        \"63a7788389d21fd4dbf92b49\"\r\n    ],\r\n    \"numberInStock\": 50,\r\n    \"dailyRentalRate\": 10,\r\n    \"audienceMinAge\": 18\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/movies",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-movie",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/movies/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"movies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63ae2b8137bb608675aefb32"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-movie",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/movies/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"movies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63aef8ba93c15ab987c49807"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-movie",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/movies/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"movies",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63a777a589d21fd4dbf92b2b"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "genres",
+					"item": [
+						{
+							"name": "get-all-genres",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/genres",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"genres"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-a-genre",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/genres/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"genres",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63ae2b8137bb608675aefb2c"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-new-genre",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Anime\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/genres",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"genres"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-a-genre",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"fuckyou\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/genres/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"genres",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63ae2b8137bb608675aefb2c"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-a-genre",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Action\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/genres/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"genres",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63ae2b8137bb608675aefb2c"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "rentals",
+					"item": [
+						{
+							"name": "get-movies-charges",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moviesIds\": [\"63ae0ad7ee374fa25f828750\", \"63ae0ad7ee374fa25f828749\", \"63ae0ad7ee374fa25f82874f\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/rentals/charges/movies",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"rentals",
+										"charges",
+										"movies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-all-rentals",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/rentals",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"rentals"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-new-rental",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"6399e6cf7639debb6084c5ff\",\r\n    \"moviesIds\": [\r\n        \"6399e6cf7639debb6084c5ff\"\r\n    ],\r\n    \"movieFeePerHour\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/rentals",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"rentals"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-a-rental",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/rentals/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"rentals",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63aef8c993c15ab987c498fc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-a-rental",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"userId\": \"f15d2dfdb85a9be12bb5f6cb\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseApiUrl}}/rentals/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"rentals",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63aef8c993c15ab987c498fc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "return-a-rental",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/rentals/63a7734aa36dddfc7df5ccde/return",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"rentals",
+										"63a7734aa36dddfc7df5ccde",
+										"return"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-a-rental",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseApiUrl}}/rentals/:id",
+									"host": [
+										"{{baseApiUrl}}"
+									],
+									"path": [
+										"rentals",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "63a775a205674288b601ee21"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "health-check",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/health-check?sort=name:asc, car-color:blue&filter=assignedRolesIds:in:car/plant/pic, color:eq:red&page=number:1, size:2&limit=some&offset=20",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"health-check"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "name:asc, car-color:blue"
+						},
+						{
+							"key": "filter",
+							"value": "assignedRolesIds:in:car/plant/pic, color:eq:red"
+						},
+						{
+							"key": "page",
+							"value": "number:1, size:2"
+						},
+						{
+							"key": "limit",
+							"value": "some"
+						},
+						{
+							"key": "offset",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health-check Copy",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/health-check/test",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"health-check",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFkbWluSWQiOiI2M2FlZjhjMDkzYzE1YWI5ODdjNDk4NzIiLCJhc3NpZ25lZFJvbGVzSWRzIjpbIjYzYWVmOGJhOTNjMTVhYjk4N2M0OTgyYSIsIjYzYWVmOGJhOTNjMTVhYjk4N2M0OTgyYyIsIjYzYWVmOGJhOTNjMTVhYjk4N2M0OTgyOCJdLCJpc1N1c3BlbmRlZCI6ZmFsc2V9LCJpYXQiOjE2NzI2MTI0ODQsImV4cCI6MTY3OTgxMjQ4NCwiaXNzIjoibm9fZW1haWxAbm9fcHJvdmlkZXIudGxkIn0.rFRzSAT0visuMJ6y36QvxSFKnObIZBbAWyd4fBAe55w",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "default"
+		},
+		{
+			"key": "baseApiUrl",
+			"value": "http://localhost:3000/api/v1",
+			"type": "default"
+		},
+		{
+			"key": "baseApiUrl",
+			"value": "http://127.0.0.1:9000/api/v1",
+			"type": "default",
+			"disabled": true
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://127.0.0.1:4000",
+			"type": "default",
+			"disabled": true
+		}
+	]
+}
